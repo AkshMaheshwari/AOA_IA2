@@ -1,0 +1,65 @@
+
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 30px;
+      background-color: black;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    .board {
+      display: grid;
+      border: 2px solid #333;
+      margin: 10px;
+    }
+    .cell {
+      width: 40px;
+      height: 40px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+    }
+    .white {
+      background-color: #f0d9b5;
+    }
+    .black {
+      background-color: #b58863;
+    }
+    button, input {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+    }
+    .log {
+      margin-top: 10px;
+      max-height: 200px;
+      overflow-y: auto;
+      width: 80%;
+      border: 1px solid #ccc;
+      padding: 10px;
+      background: #f9f9f9;
+    }
+    .solutions {
+      margin-top: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .solution-board {
+      display: grid;
+      grid-template-columns: repeat(var(--size), 20px);
+      grid-template-rows: repeat(var(--size), 20px);
+      margin: 5px;
+      border: 1px solid #aaa;
+    }
+    .solution-cell {
+      width: 20px;
+      height: 20px;
+      font-size: 14px;
+      text-align: center;
+      line-height: 20px;
+    }
