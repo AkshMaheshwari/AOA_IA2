@@ -1,8 +1,8 @@
-// This script implements the N-Queens problem using backtracking.
 const stepBoard = document.getElementById("stepBoard");
 const logBox = document.getElementById("logBox");
 const boardInput = document.getElementById("boardInput");
 const solutionDisplay = document.getElementById("solutionDisplay");
+const themeToggle = document.getElementById("themeToggle");
 let delay = 100;
 let boardSize = 8;
 
@@ -26,7 +26,9 @@ function drawBoardState(board) {
   for (let row = 0; row < boardSize; row++) {
     for (let col = 0; col < boardSize; col++) {
       const cell = document.getElementById(`step-${row}-${col}`);
-      if (cell) cell.textContent = board[row] === col ? "♛" : "";
+      if (cell) {
+        cell.innerHTML = board[row] === col ? `<span class="queen">♛</span>` : "";
+      }
     }
   }
 }
@@ -62,7 +64,9 @@ function renderSolution(board) {
       const cell = document.createElement("div");
       cell.className = "solution-cell";
       cell.style.backgroundColor = (row + col) % 2 === 0 ? "#f0d9b5" : "#b58863";
-      cell.textContent = board[row] === col ? "♛" : "";
+      if (board[row] === col) {
+        cell.innerHTML = `<span class="queen">♛</span>`;
+      }
       container.appendChild(cell);
     }
   }
@@ -104,4 +108,11 @@ async function startFullBacktracking() {
   const solutions = [];
   await solveAll(0, board, solutions);
   logMessage(`🎯 Total Solutions Found: ${solutions.length}`);
+}
+
+// Toggle light/dark theme
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    document.body.classList.toggle("dark");
+  });
 }
