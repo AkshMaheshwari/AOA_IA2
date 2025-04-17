@@ -30,8 +30,7 @@ This simulation uses **backtracking** to solve the problem and displays each que
 > 💡 Click the "Run Full Backtracking" button to watch the algorithm in action.
 
 You can try it live here:  
-🔗 **[Live Demo](https://aoa-ia-2.vercel.app/)** <!-- Replace with your actual deployed URL -->
-
+🔗 **[Live Demo](https://aoa-ia-2.vercel.app/)** 
 ---
 
 ## 🔧 How to Use
